@@ -1,0 +1,1 @@
+{"name":"ulysses-shima-portfolio","version":"1.2.0","private":true,"scripts":{"start":"node server.mjs","build":"mkdir -p dist && cp index.html styles.css script.js dashboards.html dashboard.css dashboard.js manus-routes.json dist/ && cp -r data dist/"},"engines":{"node":">=18"}}
