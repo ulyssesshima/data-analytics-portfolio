@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "status": "FICTÍCIO",
+    "source": "Dataset sintético criado para demonstração",
+    "grain": "mensal por região anonimizada",
+    "anonymization": "Regiões e entidades são rótulos genéricos; não há clientes reais.",
+    "limitations": "Valores não representam resultados reais e não devem ser usados para tomada de decisão.",
+    "last_updated": "2026-10-27"
+  },
+  "kicker": "EXECUTIVE / PERFORMANCE",
+  "title": "Executive Pulse",
+  "description": "Uma visão sintética de crescimento, margem e eficiência por região.",
+  "contextLabel": "Região",
+  "contexts": ["Consolidado", "Cluster Norte", "Cluster Sul"],
+  "chartTitle": "Receita e margem",
+  "kpis": [
+    ["Receita líquida", "R$ 8,42M", "+18,4% vs. período anterior", "up"],
+    ["Margem operacional", "24,8%", "+2,1 p.p.", "up"],
+    ["Ciclo de caixa", "31 dias", "−4 dias", "up"],
+    ["Eficiência comercial", "87,2", "+6,8 pts", "up"]
+  ],
+  "insight": ["Tração saudável", "O cenário sintético combina crescimento, estabilidade e espaço para otimização.", "A+", "92", "Confidence 0.92", "Updated just now"],
+  "labels": ["Out", "Nov", "Dez", "Jan", "Fev", "Mar"],
+  "seriesA": [52, 58, 55, 66, 73, 82],
+  "seriesB": [42, 45, 47, 51, 53, 58],
+  "legend": ["Receita indexada", "Margem"],
+  "tableTitle": "Performance por região anonimizada",
+  "heads": ["Região", "Receita", "Margem", "Crescimento", "Status"],
+  "rows": [
+    ["Cluster Sul", "R$ 2,4M", "27,4%", "+21,2%", "good"],
+    ["Cluster Sudeste", "R$ 3,1M", "25,1%", "+18,6%", "good"],
+    ["Cluster Nordeste", "R$ 1,6M", "22,3%", "+11,4%", "warn"],
+    ["Cluster Centro", "R$ 1,3M", "23,7%", "+17,9%", "good"]
+  ]
+}

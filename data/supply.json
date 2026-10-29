@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "status": "FICTÍCIO",
+    "source": "Dataset sintético criado para demonstração",
+    "grain": "semanal por categoria e centro anonimizado",
+    "anonymization": "Centros, produtos e parceiros são rótulos genéricos; não há clientes reais.",
+    "limitations": "Valores não representam estoque real nem recomendação de compra.",
+    "last_updated": "2026-10-27"
+  },
+  "kicker": "OPERATIONS / SUPPLY",
+  "title": "Supply Orbit",
+  "description": "Uma camada operacional para equilibrar cobertura, disponibilidade e perdas.",
+  "contextLabel": "Categoria",
+  "contexts": ["Todas as categorias", "Categoria Alfa", "Categoria Beta"],
+  "chartTitle": "Cobertura de estoque",
+  "kpis": [
+    ["Disponibilidade", "94,6%", "+7,1% vs. base", "up"],
+    ["Dias de cobertura", "18,4", "−2,6 dias", "up"],
+    ["Rupturas críticas", "07", "−3 ocorrências", "up"],
+    ["Perdas sintéticas", "2,9%", "−0,8 p.p.", "up"]
+  ],
+  "insight": ["Rede em equilíbrio", "A cobertura caiu sem pressionar disponibilidade — sinal sintético de reposição mais responsiva.", "A", "88", "Confidence 0.88", "Updated 2 min ago"],
+  "labels": ["Sem 1", "Sem 2", "Sem 3", "Sem 4", "Sem 5", "Sem 6"],
+  "seriesA": [68, 72, 76, 71, 83, 89],
+  "seriesB": [54, 55, 58, 62, 66, 69],
+  "legend": ["Disponibilidade", "Cobertura ideal"],
+  "tableTitle": "Pulso por centro anonimizado",
+  "heads": ["Centro", "Cobertura", "Disponibilidade", "Perdas", "Risco"],
+  "rows": [
+    ["Centro Alfa", "21,2 d", "96,4%", "1,8%", "good"],
+    ["Centro Beta", "16,8 d", "95,8%", "2,1%", "good"],
+    ["Centro Gama", "11,4 d", "89,7%", "4,8%", "bad"],
+    ["Centro Delta", "19,7 d", "93,6%", "2,7%", "warn"]
+  ]
+}
