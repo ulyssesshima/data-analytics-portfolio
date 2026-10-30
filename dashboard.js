@@ -1,5 +1,5 @@
 const DATA = {};
-const SOURCES = { executive: 'data/executive.json', supply: 'data/supply.json', quality: 'data/quality.json' };
+const SOURCES = { executive: 'data/executive.json', supply: 'data/supply.json', quality: 'data/quality.json', biomundo: 'data/biomundo.json' };
 let current = 'executive';
 const $ = id => document.getElementById(id);
 
@@ -39,11 +39,13 @@ function render() {
   $('tableTitle').textContent = `${d.tableTitle} · ${context}`;
   $('tableHead').innerHTML = `<tr>${d.heads.map(x => `<th>${x}</th>`).join('')}</tr>`;
   $('tableBody').innerHTML = d.rows.map(row => `<tr>${row.map((x, i) => `<td class="${i === row.length - 1 ? x : ''}">${x}</td>`).join('')}</tr>`).join('');
-  $('signalRing').style.background = `radial-gradient(circle,rgba(116,244,207,.1) 0 52%,transparent 53%),conic-gradient(var(--electric) 0 ${d.insight[3]}%,rgba(116,244,207,.12) ${d.insight[3]}% 100%)`;
+  document.querySelector('.table-meta').textContent = d.meta.tableMeta || 'fictitious / read-only';
+  const score = Number.parseFloat(d.insight[3]) || 0;
+  $('signalRing').style.background = `radial-gradient(circle,rgba(116,244,207,.1) 0 52%,transparent 53%),conic-gradient(var(--electric) 0 ${score}%,rgba(116,244,207,.12) ${score}% 100%)`;
 }
 
 async function loadData() {
-  $('datasetNote').textContent = 'Carregando contratos de dados sintéticos…';
+  $('datasetNote').textContent = 'Carregando contratos de dados…';
   try {
     await Promise.all(Object.entries(SOURCES).map(async ([key, path]) => {
       const response = await fetch(path, { cache: 'no-store' });
@@ -55,7 +57,7 @@ async function loadData() {
     render();
   } catch (error) {
     $('datasetBadge').textContent = 'ERRO DE FONTE';
-    $('datasetNote').textContent = 'Não foi possível carregar os JSONs. Execute o projeto por um servidor local com npm start.';
+    $('datasetNote').textContent = 'Não foi possível carregar os JSONs. Execute o projeto local com npm start.';
     $('dashDescription').textContent = error.message;
   }
 }
