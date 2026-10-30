@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "status": "REPORTADO",
+    "source": "Relato profissional fornecido por Ulysses Shima",
+    "grain": "resultado agregado por frente operacional",
+    "anonymization": "BioMundo é identificada como contexto profissional; não há clientes, pessoas ou registros individuais.",
+    "limitations": "Não foram fornecidos dados brutos, linha de base, fórmula de cálculo ou série temporal; os resultados devem ser tratados como reportados, não auditados.",
+    "tableMeta": "reportado / sem dados brutos",
+    "last_updated": "2026-10-30"
+  },
+  "kicker": "BIOMUNDO / OPERAÇÕES",
+  "title": "Operations Impact",
+  "description": "Resultados operacionais reportados pelo usuário, organizados por frente de atuação e janela de acompanhamento.",
+  "contextLabel": "Escopo",
+  "contexts": ["Consolidado", "Estoque", "Operação", "CRM"],
+  "chartTitle": "Impacto reportado por frente",
+  "kpis": [
+    ["Falta de curva A", "−31%", "em 6 meses", "up"],
+    ["Ruptura total", "−7%", "em 2 meses", "up"],
+    ["Loja vazia", "−18%", "após reorganização", "up"],
+    ["Vendas via CRM", "+26%", "clientes recorrentes", "up"]
+  ],
+  "insight": ["Operação mais responsiva", "A leitura combina disponibilidade, ruptura, fluxo de loja e relacionamento com clientes. Sem dados brutos, o próximo passo é documentar linha de base, período e método de medição.", "REPORTADO", "—", "Fonte: relato do usuário", "Sem banco de dados"],
+  "labels": ["Curva A", "Ruptura", "Loja vazia", "CRM"],
+  "seriesA": [31, 7, 18, 26],
+  "seriesB": [0, 0, 0, 0],
+  "legend": ["Resultado reportado", "Referência zero"],
+  "tableTitle": "Resultados por frente operacional",
+  "heads": ["Frente", "Resultado", "Janela / escopo", "Evidência"],
+  "rows": [
+    ["Falta de produtos curva A", "−31%", "6 meses", "REPORTADO"],
+    ["Ruptura total de estoque", "−7%", "2 meses", "REPORTADO"],
+    ["Tempo com loja vazia", "−18%", "meses e horários reorganizados", "REPORTADO"],
+    ["Vendas de clientes recorrentes via CRM", "+26%", "após melhoria do uso do CRM", "REPORTADO"]
+  ]
+}
